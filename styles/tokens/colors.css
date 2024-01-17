@@ -1,0 +1,107 @@
+/* base palette */
+@import "@radix-ui/colors/white-alpha.css";
+@import "@radix-ui/colors/black-alpha.css";
+
+/* Neutral palette */
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/mauve-alpha.css";
+@import "@radix-ui/colors/mauve-dark.css";
+@import "@radix-ui/colors/mauve-dark-alpha.css";
+
+/* Semantic palettes */
+@import "@radix-ui/colors/tomato.css"; /* destructive */
+@import "@radix-ui/colors/tomato-alpha.css";
+@import "@radix-ui/colors/tomato-dark.css";
+@import "@radix-ui/colors/tomato-dark-alpha.css";
+
+:root {
+  --grey-1: var(--mauve-1);
+  --grey-2: var(--mauve-2);
+  --grey-3: var(--mauve-3);
+  --grey-4: var(--mauve-4);
+  --grey-5: var(--mauve-5);
+  --grey-6: var(--mauve-6);
+  --grey-7: var(--mauve-7);
+  --grey-8: var(--mauve-8);
+  --grey-9: var(--mauve-9);
+  --grey-10: var(--mauve-10);
+  --grey-11: var(--mauve-11);
+  --grey-12: var(--mauve-12);
+  --grey-a1: var(--mauve-a1);
+  --grey-a2: var(--mauve-a2);
+  --grey-a3: var(--mauve-a3);
+  --grey-a4: var(--mauve-a4);
+  --grey-a5: var(--mauve-a5);
+  --grey-a6: var(--mauve-a6);
+  --grey-a7: var(--mauve-a7);
+  --grey-a8: var(--mauve-a8);
+  --grey-a9: var(--mauve-a9);
+  --grey-a10: var(--mauve-a10);
+  --grey-a11: var(--mauve-a11);
+  --grey-a12: var(--mauve-a12);
+
+  --destructive-1: var(--tomato-1);
+  --destructive-2: var(--tomato-2);
+  --destructive-3: var(--tomato-3);
+  --destructive-4: var(--tomato-4);
+  --destructive-5: var(--tomato-5);
+  --destructive-6: var(--tomato-6);
+  --destructive-7: var(--tomato-7);
+  --destructive-8: var(--tomato-8);
+  --destructive-9: var(--tomato-9);
+  --destructive-10: var(--tomato-10);
+  --destructive-11: var(--tomato-11);
+  --destructive-12: var(--tomato-12);
+
+  --inverse-1: #111111;
+  --inverse-2: #191919;
+  --inverse-3: #222222;
+  --inverse-4: #2a2a2a;
+  --inverse-5: #313131;
+  --inverse-6: #3a3a3a;
+  --inverse-7: #484848;
+  --inverse-8: #606060;
+  --inverse-9: #6e6e6e;
+  --inverse-10: #7b7b7b;
+  --inverse-11: #b4b4b4;
+  --inverse-12: #eeeeee;
+  --inverse-a1: #00000000;
+  --inverse-a2: #f5f4f609;
+  --inverse-a3: #ebeaf814;
+  --inverse-a4: #eee5f81d;
+  --inverse-a5: #efe6fe25;
+  --inverse-a6: #f1e6fd30;
+  --inverse-a7: #eee9ff40;
+  --inverse-a8: #eee7ff5d;
+  --inverse-a9: #eae6fd6e;
+  --inverse-a10: #ece9fd7c;
+  --inverse-a11: #f5f1ffb7;
+  --inverse-a12: #fdfdffef;
+}
+
+.dark {
+  --inverse-1: #fcfcfc;
+  --inverse-2: #f9f9f9;
+  --inverse-3: #f0f0f0;
+  --inverse-4: #e8e8e8;
+  --inverse-5: #e0e0e0;
+  --inverse-6: #d9d9d9;
+  --inverse-7: #cecece;
+  --inverse-8: #bbbbbb;
+  --inverse-9: #8d8d8d;
+  --inverse-10: #838383;
+  --inverse-11: #646464;
+  --inverse-12: #202020;
+  --inverse-a1: #55005503;
+  --inverse-a2: #2b005506;
+  --inverse-a3: #30004010;
+  --inverse-a4: #20003618;
+  --inverse-a5: #20003820;
+  --inverse-a6: #14003527;
+  --inverse-a7: #10003332;
+  --inverse-a8: #08003145;
+  --inverse-a9: #05001d73;
+  --inverse-a10: #0500197d;
+  --inverse-a11: #0400119c;
+  --inverse-a12: #020008e0;
+}

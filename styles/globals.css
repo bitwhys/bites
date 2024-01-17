@@ -1,0 +1,54 @@
+@import "tokens/colors.css";
+@import "tokens/radius.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: white;
+    --foreground: var(--grey-12);
+
+    --muted: var(--grey-3);
+    --muted-foreground: var(--grey-9);
+
+    --popover: white;
+    --popover-foreground: var(--grey-12);
+
+    --border: var(--grey-6);
+    --input: var(--grey-7);
+
+    --card: white;
+    --card-foreground: var(--grey-12);
+
+    --primary: var(--inverse-1);
+    --primary-foreground: var(--inverse-12);
+
+    --secondary: var(--grey-4);
+    --secondary-foreground: var(--grey-11);
+
+    --accent: var(--grey-4);
+    --accent-foreground: var(--grey-11);
+
+    --destructive: var(--destructive-9);
+    --destructive-foreground: white;
+
+    --ring: var(--grey-8);
+  }
+
+  .dark {
+    --background: var(--grey-1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
