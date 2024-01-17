@@ -25,9 +25,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # ignore to speed up commits and pushes
-data/images
-data/sources
-data/thumbnails
 
 # local env files
 .env.local
