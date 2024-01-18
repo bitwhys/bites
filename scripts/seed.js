@@ -25,8 +25,7 @@ const seedUsers = async (client) => {
       users.map(
         (user) => client.sql`
      INSERT INTO users (username,email,bio,createdAt,lastLogin,socialMediaLinks,isProUser,authProvider,authProviderId),
-     VALUES (${user.username},${user.email},${user.bio},${user.createdAt},${user.lastLogin},${user.socialMediaLinks},${user.isProUser},${user.authProvider},${user.authProviderId}),
-     ON CONFLICT (id) DO NOTHING;
+     VALUES (${user.username},${user.email},${user.bio},${user.createdAt},${user.lastLogin},${user.socialMediaLinks},${user.isProUser},${user.authProvider},${user.authProviderId});
     `
       )
     )
@@ -46,30 +45,13 @@ const seedDesigns = async (client) => {
   try {
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`
     const createTable = await client.sql`
-     CREATE TABLE IF NOT EXISTS designs (
-       id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-       userId VARCHAR(255) NOT NULL REFERENCES users (id), -- Reference to the creators user ID
-       title VARCHAR(250) NOT NULL,
-       description TEXT,
-       thumbnailUrl VARCHAR(500) NOT NULL,
-       tags TEXT[],
-       createdAt TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
-       updatedAt TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
-       isPro BOOLEAN DEFAULT false NOT NULL,
-       version VARCHAR(50),
-       privacySetting VARCHAR(50) DEFAULT 'public' NOT NULL,
-       colors VARCHAR(7)[],
-       software VARCHAR(100), -- The design tool used to create the design source
-       sourceUrl VARCHAR(500) NOT NULL,
-       previewUrl VARCHAR(500) NOT NULL,
-       downloads INT DEFAULT 0 NOT NULL,
-       views INT DEFAULT 0 NOT NULL,
-       rating DECIMAL(3,2), -- The average rating of the design
-       reviewCount INT DEFAULT 0 NOT NULL,
-       slug VARCHAR(255) NOT NULL,
-       dominantColor VARCHAR(7),
-       ipfscid VARCHAR(255)
-     );
+    CREATE TABLE IF NOT EXISTS designs (
+      id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+      userId VARCHAR(255) NOT NULL REFERENCES users (id),
+      title VARCHAR(250) NOT NULL,
+      description TEXT,
+      thumbnailUrl VARCHAR(500) NOT NULL
+);
     `
     console.log(`Created "designs" table`)
 
