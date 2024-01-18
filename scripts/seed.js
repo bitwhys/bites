@@ -1,6 +1,47 @@
 const { db } = require('@vercel/postgres')
-const { designs } = require('../data/designs.data')
+const { designs } = require('../data/designs')
+const { users } = require('../data/users')
 
+const seedUsers = async (client) => {
+  try {
+    await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`
+    const createTable = client.sql` CREATE TABLE IF NOT EXISTS users (
+      id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+      username VARCHAR(150) NOT NULL UNIQUE,
+      email VARCHAR(255) NOT NULL UNIQUE,
+      bio TEXT,
+      createdAt TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
+      lastLogin TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP NOT NULL,
+      socialMediaLinks JSONB,
+      isProUser BOOLEAN DEFAULT false NOT NULL,
+      authProvider VARCHAR(100) NOT NULL,
+      authProviderId VARCHAR(255)
+    );
+    `
+
+    console.log(`Created "users" table`)
+
+    const insertedUsers = Promise.all(
+      users.map(
+        (user) => client.sql`
+     INSERT INTO users (username,email,bio,createdAt,lastLogin,socialMediaLinks,isProUser,authProvider,authProviderId),
+     VALUES (${user.username},${user.email},${user.bio},${user.createdAt},${user.lastLogin},${user.socialMediaLinks},${user.isProUser},${user.authProvider},${user.authProviderId}),
+     ON CONFLICT (id) DO NOTHING;
+    `
+      )
+    )
+
+    console.log(`Seeded ${insertedUsers.length} users`)
+
+    return {
+      createTable,
+      users: insertedUsers,
+    }
+  } catch (error) {
+    console.error('Error seeding users:', error)
+    throw error
+  }
+}
 const seedDesigns = async (client) => {
   try {
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`
@@ -59,6 +100,7 @@ const main = async () => {
   const client = await db.connect()
   // TODO: await calls to seed functions passing in the client
 
+  await seedUsers(client)
   await seedDesigns(client)
 
   await client.end()

@@ -1,4 +1,4 @@
-export const designs = [
+const designs = [
   {
     tags: ['billing', 'payment'],
     colors: ['#f1f1fb', '#ea4c3c', '#393a62', '#9292ae', '#dba09e', '#747399'],
@@ -11,9 +11,9 @@ export const designs = [
     software: 'figma',
     dominantColor: '#f1f0fb',
     slug: 'figma-billing-page-payment-day-1585',
-    sourceUrl: '/uploads/1585/day_1585.fig',
-    previewUrl: '/uploads/1585/day_1585.png',
-    thumbnailUrl: '/uploads/1585/day_1585_thumb.png',
+    sourceUrl: '/sources/day_1585.fig',
+    previewUrl: '/previews/day_1585.png',
+    thumbnailUrl: '/thumbnails/day_1585_thumb.png',
     version: 0,
     ipfsCID: 'QmYU1RbdZaCXZSc5Ub4zTH9zY4bE3jTQZroU5tyBYJCNPh',
   },
@@ -29,9 +29,9 @@ export const designs = [
     software: 'figma',
     dominantColor: '#f6e9f9',
     slug: 'figma-blog-component-search-tags-links-card-day-1584',
-    sourceUrl: '/uploads/1584/day_1584.fig',
-    previewUrl: '/uploads/1584/day_1584.png',
-    thumbnailUrl: '/uploads/1584/day_1584_thumb.png',
+    sourceUrl: '/sources/day_1584.fig',
+    previewUrl: '/previews/day_1584.png',
+    thumbnailUrl: '/thumbnails/day_1584_thumb.png',
     version: 0,
     ipfsCID: 'QmbjTNJMqXs5aoZQMUXTxPoh7zdXpnU7KdXcjkx1tPerKt',
   },
@@ -540,3 +540,7 @@ export const designs = [
     ipfsCID: 'QmZAhQ9tobE5u3SVjRbiC3JZ3HJDuJjki2yRmfRLUuSDkS',
   },
 ]
+
+module.exports = {
+  designs,
+}
