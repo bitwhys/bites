@@ -1,9 +1,9 @@
-import Link from "next/link"
+import Link from 'next/link'
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { siteConfig } from '@/config/site'
+import { buttonVariants } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export default function IndexPage() {
   return (
@@ -53,7 +53,7 @@ export default function IndexPage() {
               </svg>
             </div>
             <h1 className="mt-2 text-4xl font-semibold text-inverse-12">
-              Choose a UI library for your template
+              Your own playground for Tailwind CSS
             </h1>
             <div className="mt-14">
               <Tabs className="w-full">
@@ -96,26 +96,26 @@ export default function IndexPage() {
                 <div className="h-10 w-20 rounded-xl bg-grey-9"></div>
               </header>
               <section className="grid w-full grid-cols-2 gap-8 overflow-y-scroll">
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
-                <div className="aspect-video w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
+                <div className="aspect-[16/10] w-full rounded-3xl bg-grey-3"></div>
               </section>
             </div>
           </div>
