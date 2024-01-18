@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 export default function IndexPage() {
   return (
     <>
-      <header className="mt-6 flex h-16 items-center justify-end px-8 py-2">
+      <header className="relative mt-6 flex h-16 items-center justify-end px-8 py-2">
         <div className="flex items-center gap-x-8">
           <div className="relative flex h-12 w-[clamp(200px,17vw,300px)] items-center rounded-full border border-inverse-6 bg-inverse-2">
             <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
@@ -37,7 +37,7 @@ export default function IndexPage() {
         <div className="flex h-full">
           {/* -------- Side Panel -------- */}
           <div className="flex h-full max-w-[500px] flex-col p-16 pr-10">
-            <div className="h-[calc(100vh_-_64px_-_48px_-_48px)] flex flex-col">
+            <div className="flex h-[calc(100vh_-_64px_-_48px_-_48px)] flex-col">
               {/* -------- logo -------- */}
               <div>
                 <svg
@@ -55,13 +55,13 @@ export default function IndexPage() {
                 </svg>
               </div>
               {/* -------- heading -------- */}
-              <h1 className="mt-2 mb-4 text-4xl font-semibold text-inverse-12">
+              <h1 className="mb-4 mt-2 text-4xl font-semibold text-inverse-12">
                 Your own playground for Tailwind CSS
               </h1>
               {/* -------- tabs -------- */}
               <Tabs
                 defaultValue="community"
-                className="w-full relative overflow-y-auto h-full"
+                className="relative size-full overflow-y-auto"
               >
                 <div className="mt-14">
                   <TabsList
